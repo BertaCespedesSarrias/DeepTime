@@ -1,0 +1,78 @@
+name: test
+run: test
+model_type: cox
+seed: 25
+data_path: C:/Users/Berta/Desktop/EPFL/MA2/lab2/data/UKB_subset_tp2.csv
+map_path: C:/Users/Berta/Desktop/EPFL/MA2/lab2/data/ccsr_map.txt
+epochs: 60
+learning_rate: 0.001
+input_size: 20
+hidden_size: 20 
+output_size: 20
+num_diseases: 11
+disease_list:
+  - Essential hypertension
+  - Benign neoplasms
+  - Coronary atherosclerosis and other heart disease
+  - Diabetes mellitus without complication
+  - Thyroid disorders
+  - Cardiac dysrhythmias
+  - Pneumonia (except that caused by tuberculosis)
+  - Obesity
+  - Circulatory signs and symptoms
+  - Chronic obstructive pulmonary disease and bronchiectasis
+  - Pleurisy, pleural effusion and pulmonary collapse
+features:
+  # - Sex_0
+  # - ever_smoked_0
+  # - alchohol_status_0
+  # - Age_0
+  # - BMI_0
+  # - SBP_0
+  # - TDI_0
+  # - LDL_0
+  # - forced_vital_capacity_0
+  # - pulse_rate_0
+  # - haemoglobin_concentration_0
+  # - FEV1_0
+  # - peak_expiratory_flow_0
+  - Sex_0
+  - ever_smoked_2_0
+  - alchohol_status_2_0
+  - Age_2
+  - BMI_2
+  - SBP_2
+  - TDI_0
+  - forced_vital_capacity_2
+  - pulse_rate_2
+  - haemoglobin_concentration_2
+  - FEV1_2
+  - peak_expiratory_flow_2
+  # - lv_ef_2
+  # - cardiac_output_2
+  # - Median_RV
+  # - Median_Myo
+  # - Median_LV
+
+fill_nan_cols:
+  # - SBP_0
+  # - LDL_0
+  # - forced_vital_capacity_0
+  # - pulse_rate_0
+  # - haemoglobin_concentration_0
+  # - FEV1_0
+  # - peak_expiratory_flow_0
+  - SBP_2
+  - forced_vital_capacity_2
+  - pulse_rate_2
+  - haemoglobin_concentration_2
+  - FEV1_2
+  - peak_expiratory_flow_2
+  # - lv_ef_2
+  # - cardiac_output_2
+  # - Median_RV
+  # - Median_Myo
+  # - Median_LV
+
+batch_count: 32
+early_stop: False

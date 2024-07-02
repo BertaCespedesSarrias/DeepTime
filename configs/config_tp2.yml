@@ -1,0 +1,52 @@
+name: test
+run: deep
+seed: 0
+model_type: deep
+data_path: C:/Users/Berta/Desktop/EPFL/MA2/lab2/data/UKB_subset_tp2.csv
+map_path: C:/Users/Berta/Desktop/EPFL/MA2/lab2/data/ccsr_map.txt
+epochs: 20
+learning_rate: 0.001
+input_size: 20
+hidden_size: 20 
+output_size: 20
+num_diseases: 5
+disease_list:
+  - Essential hypertension
+  - Benign neoplasms
+  - Coronary atherosclerosis and other heart disease
+  - Diabetes mellitus without complication
+  - Thyroid disorders
+features:
+  - Sex_0
+  - ever_smoked_2_0
+  - alchohol_status_2_0
+  - Age_2
+  - BMI_2
+  - SBP_2
+  - TDI_0
+  - forced_vital_capacity_2
+  - pulse_rate_2
+  - haemoglobin_concentration_2
+  - FEV1_2
+  - peak_expiratory_flow_2
+  - lv_ef_2
+  - cardiac_output_2
+  - Median_RV
+  - Median_Myo
+  - Median_LV
+
+fill_nan_cols:
+  - SBP_2
+  - forced_vital_capacity_2
+  - pulse_rate_2
+  - haemoglobin_concentration_2
+  - FEV1_2
+  - peak_expiratory_flow_2
+  - lv_ef_2
+  - cardiac_output_2
+  - Median_RV
+  - Median_Myo
+  - Median_LV
+
+batch_count: 158
+  

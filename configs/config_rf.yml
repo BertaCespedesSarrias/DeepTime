@@ -1,0 +1,35 @@
+name: test
+model_type: random_forest
+seed: 0
+data_path: C:/Users/Berta/Desktop/EPFL/MA2/lab2/data/UKB_subset.csv
+map_path: C:/Users/Berta/Desktop/EPFL/MA2/lab2/data/ccsr_map.txt
+num_diseases: 2
+disease_list:
+  - Essential hypertension
+  - Diabetes mellitus without complication
+features:
+  - Sex_0
+  - ever_smoked_0
+  - alchohol_status_0
+  - Age_0
+  - BMI_0
+  - SBP_0
+  - TDI_0
+  - LDL_0
+  - forced_vital_capacity_0
+  - pulse_rate_0
+  - haemoglobin_concentration_0
+  - FEV1_0
+  - peak_expiratory_flow_0
+
+fill_nan_cols:
+  - SBP_0
+  - LDL_0
+  - forced_vital_capacity_0
+  - pulse_rate_0
+  - haemoglobin_concentration_0
+  - FEV1_0
+  - peak_expiratory_flow_0
+  
+hyper_tuning_rsf: True
+cv_folds: 2
